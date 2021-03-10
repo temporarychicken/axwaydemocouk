@@ -1,0 +1,10 @@
+[Unit]
+Description=Discovery Agent Service
+After=quickstart-online.target
+
+[Service]
+ExecStart=/home/azureuser/scripts/discoveryagent.sh
+
+[Install]
+WantedBy=multi-user.target
+
