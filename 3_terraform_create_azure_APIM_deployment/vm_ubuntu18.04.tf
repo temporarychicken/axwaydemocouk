@@ -25,7 +25,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
 
 	storage_image_reference {
 		#id			= data.azurerm_shared_image.axwaydemocouk-image.id
-		id			= "/subscriptions/05faa53b-97f9-42e1-b5c4-36b85992031b/resourceGroups/dl-resourcegroup/providers/Microsoft.Compute/galleries/axwaydemocouksharedimagegallery/images/axwaycoukImageDefintion/versions/1.0.0"
+		id			= "/subscriptions/05faa53b-97f9-42e1-b5c4-36b85992031b/resourceGroups/dl-resourcegroup/providers/Microsoft.Compute/galleries/axwaydemocouksharedimagegallery/images/axwaycoukImageDefintion/versions/3.0.0"
 	}
 	
 	
@@ -35,8 +35,6 @@ resource "azurerm_virtual_machine" "myterraformvm" {
 		caching			= "ReadWrite"
 		create_option   = "FromImage"
 		os_type         = "Linux"
-		#managed_disk_id	= data.azurerm_shared_image.axwaydemocouk-image.id
-		#managed_disk_id = "/subscriptions/05faa53b-97f9-42e1-b5c4-36b85992031b/resourceGroups/dl-resourcegroup/providers/Microsoft.Compute/galleries/axwaydemocouksharedimagegallery/images/axwaycoukImageDefintion/versions/1.0.0"
 		managed_disk_type = "Premium_LRS"
 		write_accelerator_enabled = false
 	}
